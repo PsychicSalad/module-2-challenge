@@ -5,6 +5,11 @@
 :root {
   --grey:rgb(61, 62, 73, 1);
   --lightblue:rgb(107, 205, 212, 1);
+  --lavender: rgb(191, 119, 219, 1);
+  --darkpurple: rgb(62, 32, 73, 1);
+  --lightpurple:rgb(232, 167, 255, 1);
+  --pastelpurple: rgb(246, 223, 255);
+  --yellow: rgb(215, 250, 150);
   --green: rgb(72, 223, 59, 1);
   --red: rgb(148, 28, 28, 1);
   --orange: rgb(226, 106, 8);
@@ -16,79 +21,96 @@ body {
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+  background-color:var(--pastelpurple)
 }
+
 
 
 header {
-  position: absolute;
-  width: 100%;
-  height: 60px;
-  background-color:var(--grey);
+
+  padding: 15px 15px 15px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--darkpurple);
+}
+
+
+header h1 {
+  color: var(--darkpurple);
+  background-color:var(--lightpurple);
+  font-size: 3.6rem;
   font-weight: bold;
 }
 
-header h1 {
-  position: relative;
-  color:rgb(61, 62, 73);
-  background-color:var(--lightblue);
-  width: 250px;
-  height: 40px;
-  font-size: 32px;
-  text-align: right;
-  padding-right: 10px;
-  padding-bottom: 10px;
-
-}
-
 nav {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
 
-  position: absolute;
-  right: 100px;
-  top: 10px;
 }
-
 
 nav a {
   text-decoration: none;
-  display: inline;
-  color: var(--lightblue);
-  border-bottom-style: solid;
-  border-bottom-color:var(--lightblue);
-  border-bottom-width: 3px;
-  font-weight:normal;
-  font-size: 18px;
+  padding: 5px, 10px;
+  color: var(--lightpurple);
+  margin-right: 20px;
+  background-image: linear-gradient(270deg, var(--pastelpurple) 0%, var(--pastelpurple) 0%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: bottom;
+  transition: all 0.25s ease-in;
+  font-size: 1.4rem;
 
+}
+
+nav a:last-child {
+  margin-right: 0;
+  
+}
+
+nav a:hover {
+
+  background-size: 100% 100%;
+  color: var(--red);
 }
 
 .hero-banner {
 
-  width: 100%;
-  height: 250px;
   background-image: url(../images/02-hero-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-color:rgb(84, 84, 119, 1);
+  background-color:var(--lightpurple);
   background-blend-mode: multiply;
   background-position: center;
+  min-height: 30vh;
+  color: var(--pastelpurple);
+  padding:2% 6%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
   
   }
 
+.hero-banner div {
 
-.hero-banner > h2 {
-  color:var(--grey);
-  background-color: var(--lightblue);
-  width: 250px;
-  height: 50px;
-  font-size: 28px;
-  text-align: center;
-  font-weight: bold;
-  position: relative;
-  float: right;
-  top: 170px;
-  right: 50px;
+    flex: 0 0 90%;
+  }
+
+.hero-banner h2 {
+
+  background-color: var(--darkpurple) ;
+  color: var(--pastelpurple);
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 2.3rem;
+  line-height: 1.2;
+  display: inline;
 
 }
-
 
 .page-wrapper {
   max-width: 80%;
@@ -115,10 +137,11 @@ nav a {
   flex: 0 0 20%;
   padding: 10px;
   border-right-style: solid;
-  border-right-color:var(--grey);
+  border-right-color:var(--darkpurple);
   border-right-width: 5px;
   font-size: 30px;
   font-weight: bold;
+  color: var(--darkpurple);
 }
 
 .page-section > div {
@@ -138,9 +161,9 @@ nav a {
 
 .flex-item {
 
-  border: 5px solid var(--green);
-  background-color: var(--red);
-  color: var(--orange);
+  border: 5px solid var(--lavender);
+  background-color: var(--lavender);
+  color: var(--darkpurple);
   min-height: 150px;
   max-height: 150px;
   flex-basis: calc(50% - 1em);
@@ -165,7 +188,7 @@ nav a {
 }
 
 .contact-details p {
-  color: var(--orange);
+  color: var(--darkpurple);
   padding: 15px;
   text-decoration: none;
   font-weight: normal;
@@ -176,7 +199,7 @@ nav a {
 
 .contact-details p:hover {
 
-color:aqua;  
+color: var(--lightpurple);  
 }
 
 
