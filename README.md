@@ -26,8 +26,7 @@ To visit the website itself simply click on the deployed website link provided. 
 
 ## Screenshot
 
-
-![Screenshot of Portfolio site](../module-2-challenge/images/portfolio-site-screenshot.png)
+![Screenshot of Portfolio Site](images/portfolio-site-screenshot.png)
 
 ## Credits
 N/A
